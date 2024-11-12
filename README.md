@@ -8,3 +8,8 @@ No banco de dados em memoria, salvei os dados dos no numero de participantes, a 
 ### Ferramentas 
 * Java
 * Spring 
+### Projeto do Uber 
+Onde esse serviço se conecta com o desafio da uber 
+```
+https://github.com/PauloAquarius0299/challenge-uber-email
+```
