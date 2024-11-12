@@ -1,5 +1,6 @@
 package com.paulotech.event_microservices.domain;
 
+import com.paulotech.event_microservices.dtos.EventRequestDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,7 +17,16 @@ public class Event {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     private int maxParticipants;
+    private int registeredParticipants;
     private String date;
     private String title;
     private String description;
+
+    public Event(EventRequestDTO eventRequest){
+        this.date = eventRequest.date();
+        this.maxParticipants = eventRequest.maxParticipants();
+        this.registeredParticipants = eventRequest.registeredParticipants();
+        this.title = eventRequest.title();
+        this.description = eventRequest.description();
+    }
 }
